@@ -1,7 +1,6 @@
 import Vaso from '../src/Vaso'
 
-//describe("Test Vaso", ()=> {
-//})
+describe("Test Vaso", ()=> {
     test("deberiaDevolverVerdaderoSiExistenVasos", ()=> {
         const vasoPequenos: Vaso = new Vaso(2, 10)
         const resultado: Boolean = vasoPequenos.hasVasos(1)
@@ -19,3 +18,4 @@ import Vaso from '../src/Vaso'
         vasoPequenos.giveVasos(1)
         expect(vasoPequenos.getCantidadVasos()).toBe(4)    
     })
+})
