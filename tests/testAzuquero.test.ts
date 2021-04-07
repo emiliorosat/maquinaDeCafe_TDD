@@ -2,7 +2,11 @@ import Azucarero from '../src/Azuquero'
 
 describe("Test Azuquero", ()=> {
     
-    const azuquero = new Azucarero(10)
+    let azuquero: Azucarero
+    
+    beforeAll(()=>{
+        azuquero = new Azucarero(10)
+    })
     
     test("deberiaDevolverVerdaderoSiHaySuficienteAzucarEnElAzuquero", ()=> {
         expect( azuquero.hasAzucar(5) ).toBe(true)
@@ -16,10 +20,10 @@ describe("Test Azuquero", ()=> {
     
     test("deberiaRestarAzucarAlAzuquero", ()=> {
         azuquero.giveAzucar(5)
-        expect( azuquero.getCantidadDeAzucar() ).toBe(5)
+        expect( azuquero.getCantidadAzucar() ).toBe(5)
         
         azuquero.giveAzucar(2)
-        expect( azuquero.getCantidadDeAzucar() ).toBe(3)
+        expect( azuquero.getCantidadAzucar() ).toBe(3)
         
     })
 })

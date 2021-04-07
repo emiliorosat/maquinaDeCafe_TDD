@@ -16,6 +16,6 @@ describe("Test Cafeteria", ()=> {
     it("deberiaRestarCafeALaCafetera", ()=> {
         const cafetera: Cafetera = new Cafetera(10)
         cafetera.giveCafe(7)
-        expect(cafetera.getCantidadDeCafe()).toBe(3)
+        expect(cafetera.getCantidadCafe()).toBe(3)
     })
 })

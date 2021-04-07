@@ -9,7 +9,7 @@ export default class Azucarero
 
     public setCantidadDeAzucar(param1: number)
     {}
-    public getCantidadDeAzucar()
+    public getCantidadAzucar()
     {
         return this.cantidadDeAzucar
     }

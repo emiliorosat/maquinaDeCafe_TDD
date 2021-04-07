@@ -9,7 +9,7 @@ export default class Cafetera
 
     public setCantidadDeCafe(param1: number)
     {}
-    public getCantidadDeCafe()
+    public getCantidadCafe()
     {
         return this.cantidadCafe
     }
