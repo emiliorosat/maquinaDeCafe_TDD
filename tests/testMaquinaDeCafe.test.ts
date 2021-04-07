@@ -10,7 +10,7 @@ describe("Test Maquina de cafe", ()=> {
     const vasosMediano: Vaso = new Vaso(5, 20)
     const vasosGrande: Vaso = new Vaso(5, 30)
     let azucarero: Azucarero = new Azucarero(20)
-    const maquinaDeCafe: MaquinaDeCafe = MaquinaDeCafe()
+    const maquinaDeCafe: MaquinaDeCafe = new MaquinaDeCafe()
 
     maquinaDeCafe.setCafetera(cafetera)
     maquinaDeCafe.setVasosPequeno(vasosPequeno)
@@ -18,28 +18,28 @@ describe("Test Maquina de cafe", ()=> {
     maquinaDeCafe.setVasosGrande(vasosGrande)
     maquinaDeCafe.setAzucarero(azucarero)
 
-    it("deberiaDevolverUnVasoPequeno", ()=> {
+    test("deberiaDevolverUnVasoPequeno", ()=> {
         const vaso: Vaso = maquinaDeCafe.getTipoDeVaso("pequeno")
         expect( maquinaDeCafe.vasosPequeno ).toBe(vaso)
     })
 
-    it("deberiaDevolverUnVasoMediano", ()=> {
+    test("deberiaDevolverUnVasoMediano", ()=> {
         const vaso: Vaso = maquinaDeCafe.getTipoDeVaso("mediano")
         expect( maquinaDeCafe.vasosMediano ).toBe(vaso)
     })
 
-    it("deberiaDevolverUnVasoGrande", ()=> {
+    test("deberiaDevolverUnVasoGrande", ()=> {
         const vaso: Vaso = maquinaDeCafe.getTipoDeVaso("grande")
         expect( maquinaDeCafe.vasosGrande ).toBe(vaso)
     })
 
-    it("deberiaDevolverNoHayVasos", ()=> {
+    test("deberiaDevolverNoHayVasos", ()=> {
         const vaso: Vaso = maquinaDeCafe.getTipoDeVaso("pequeno")
         const resultado: string = maquinaDeCafe.getVasoDeCafe(vaso, 10, 2)
         expect( resultado ).toBe("No hay Vasos")
     })
 
-    it("deberiaDevolverNoHayCafe", ()=> {
+    test("deberiaDevolverNoHayCafe", ()=> {
         cafetera = new Cafetera(5)
         maquinaDeCafe.setCafetera(cafetera)
         const vaso: Vaso = maquinaDeCafe.getTipoDeVaso("pequeno")
@@ -47,7 +47,7 @@ describe("Test Maquina de cafe", ()=> {
         expect( resultado ).toBe("No hay Cafe")
     })
 
-    it("deberiaDevolverNoHayAzucar", ()=> {
+    test("deberiaDevolverNoHayAzucar", ()=> {
         azucarero = new Azucarero(2)
         maquinaDeCafe.setAzucarero(azucarero)
         const vaso: Vaso = maquinaDeCafe.getTipoDeVaso("pequeno")
@@ -55,28 +55,28 @@ describe("Test Maquina de cafe", ()=> {
         expect( resultado ).toBe("No hay Azucar")
     })
 
-    it("deberiaRestarCafe", ()=> {
+    test("deberiaRestarCafe", ()=> {
         const vaso: Vaso = maquinaDeCafe.getTipoDeVaso("pequeno")
         maquinaDeCafe.getVasoDeCafe(vaso, 1, 3)
-        const resultado: number = maquinaDeCafe.getCafetera().getCantidadCafe()
+        const resultado: number = maquinaDeCafe.getCafetera().getCantidadDeCafe()
         expect( resultado ).toBe(40)
     })
 
-    it("deberiaRestarVaso", ()=> {
+    test("deberiaRestarVaso", ()=> {
         const vaso: Vaso = maquinaDeCafe.getTipoDeVaso("pequeno")
         maquinaDeCafe.getVasoDeCafe(vaso, 1, 3)
         const resultado: number = maquinaDeCafe.getVasosPequeno().getCantidadVasos()
         expect( resultado ).toBe(4)
     })
 
-    it("deberiaRestarAzucar", ()=> {
+    test("deberiaRestarAzucar", ()=> {
         const vaso: Vaso = maquinaDeCafe.getTipoDeVaso("pequeno")
         maquinaDeCafe.getVasoDeCafe(vaso, 1, 3)
-        const resultado: number = maquinaDeCafe.getAzucarero().getCantidadAzucar()
+        const resultado: number = maquinaDeCafe.getAzucarero().getCantidadDeAzucar()
         expect( resultado ).toBe(17)
     })
 
-    it("deberiaDevolverFelicitaciones", ()=> {
+    test("deberiaDevolverFelicitaciones", ()=> {
         const vaso: Vaso = maquinaDeCafe.getTipoDeVaso("pequeno")
         const resultado: string = maquinaDeCafe.getVasoDeCafe(vaso, 1, 3)
         expect( resultado ).toBe("Felicitaciones")
