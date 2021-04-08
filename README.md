@@ -1,7 +1,7 @@
 # Maquina De Cafe 
 Implementando Test Driven Development
 
-## preparacion
+## Preparacion / Uso
 Desde la terminal, dentro del directorio del proyecto:
  - $ npm install
 
