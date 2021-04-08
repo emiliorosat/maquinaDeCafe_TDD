@@ -1,4 +1,5 @@
-# Maquina De Cafe implementando Test Driven Development
+# Maquina De Cafe 
+Implementando Test Driven Development
 
 ## preparacion
 ### Desde la terminal dentro del directorio del proyecto:
