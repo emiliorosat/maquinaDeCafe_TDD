@@ -1,4 +1,4 @@
-import Vaso from '../src/Vaso'
+import Vaso from '../src/models/Vaso'
 
 describe("Test Vaso", ()=> {
     test("deberiaDevolverVerdaderoSiExistenVasos", ()=> {

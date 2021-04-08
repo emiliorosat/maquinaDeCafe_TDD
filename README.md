@@ -9,4 +9,8 @@
 - NodeJS
 - Typescrypt
 - Jest
+- inquirer
+
+## Patrones/Metodologias/Modelos
 - POO
+- TDD

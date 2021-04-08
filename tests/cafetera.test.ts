@@ -1,4 +1,4 @@
-import Cafetera from '../src/Cafetera'
+import Cafetera from '../src/models/Cafetera'
 
 describe("Test Cafeteria", ()=> {
     it("deberiaDevolverVerdaderoSiExisteCafe", ()=> {

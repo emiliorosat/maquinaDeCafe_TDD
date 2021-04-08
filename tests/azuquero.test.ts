@@ -1,4 +1,4 @@
-import Azucarero from '../src/Azuquero'
+import Azucarero from '../src/models/Azuquero'
 
 describe("Test Azuquero", ()=> {
     

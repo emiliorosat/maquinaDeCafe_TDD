@@ -1,7 +1,7 @@
-import MaquinaDeCafe from '../src/MaquinaDeCafe'
-import Vaso from '../src/Vaso'
-import Azucarero from '../src/Azuquero'
-import Cafetera from '../src/Cafetera'
+import MaquinaDeCafe from '../src/models/MaquinaDeCafe'
+import Vaso from '../src/models/Vaso'
+import Azucarero from '../src/models/Azuquero'
+import Cafetera from '../src/models/Cafetera'
 
 describe("Test Maquina de cafe", ()=> {
 

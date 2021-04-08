@@ -44,6 +44,11 @@ export default class MaquinaDeCafe
         // Preparando el cafe
         if(this.vasosPequeno.getContenido() === tipoDeVaso.getContenido())
             this.vasosPequeno.giveVasos(cantidadDeVasos)
+        else if(this.vasosMediano.getContenido() === tipoDeVaso.getContenido())
+            this.vasosMediano.giveVasos(cantidadDeVasos)
+        else if(this.vasosGrande.getContenido() === tipoDeVaso.getContenido())
+            this.vasosGrande.giveVasos(cantidadDeVasos)
+        else return "Error al Obtener Vaso"
         this.azucar.giveAzucar(cantidadDeAzucar)
         this.cafe.giveCafe(tipoDeVaso.getContenido())
         return "Felicitaciones"
