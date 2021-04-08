@@ -1,4 +1,4 @@
-# maquinaDeCafe_TDD
+# Maquina De Cafe implementando Test Driven Development
 
 ## preparacion
 ### Desde la terminal dentro del directorio del proyecto:
