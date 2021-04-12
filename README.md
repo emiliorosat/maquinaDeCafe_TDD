@@ -3,14 +3,17 @@ Implementando Test Driven Development
 
 ## Preparacion / Uso
 Desde la terminal, dentro del directorio del proyecto:
- - $ npm install
-
+```bash
+$ npm install
+```
  Ejecutar pruebas
- - $ npm test
-
+ ```bash
+ $ npm test
+```
  Ejecutar aplicacion
- - $ npm start
-
+ ```bash
+ $ npm start
+```
 ## Tecnologias
 - NodeJS
 - Typescrypt
